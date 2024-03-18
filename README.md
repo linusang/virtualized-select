@@ -3,4 +3,3 @@
 Issues:
 
 - keyboard navigation not working as expected
-- scrollbar on virtualized list not rendering correctly

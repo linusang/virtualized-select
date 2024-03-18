@@ -49,20 +49,18 @@ const { list, containerProps, wrapperProps } = useVirtualList(props.items, {
 
     <SelectPortal>
       <SelectContent :side-offset="5" as-child position="popper">
-        <div
-          class="bg-white shadow-lg border border-gray-200"
-          v-bind="containerProps"
-          style="max-height: 300px"
-        >
-          <div v-bind="wrapperProps">
-            <SelectItem
-              style="height: 32px"
-              v-for="item in list"
-              :key="item.index"
-              :value="item.data.id"
-              class="py-1 px-3 data-[highlighted]:bg-gray-200"
-              >{{ item.data.label }}</SelectItem
-            >
+        <div class="bg-white shadow-lg border border-gray-200">
+          <div v-bind="containerProps" style="max-height: 300px">
+            <div v-bind="wrapperProps">
+              <SelectItem
+                style="height: 32px"
+                v-for="item in list"
+                :key="item.index"
+                :value="item.data.id"
+                class="py-1 px-3 data-[highlighted]:bg-gray-200"
+                >{{ item.data.label }}</SelectItem
+              >
+            </div>
           </div>
         </div>
       </SelectContent>
